@@ -9,9 +9,19 @@
 
 <body>
 
+<!-- 🔐 LOGIN SCREEN -->
+<div id="loginScreen" class="login">
+  <h1>TaskMoney</h1>
+  <p>Connecte-toi pour continuer</p>
+  <button id="googleLogin">🔵 Se connecter avec Google</button>
+</div>
+
+<!-- 📱 APP SCREEN -->
+<div id="app" style="display:none;">
+
 <header>
   <h1>TaskMoney</h1>
-  <p class="balance">💰 Solde : 0.00$</p>
+  <p class="balance">💰 Solde : <span id="balance">0.00$</span></p>
 </header>
 
 <section class="card">
@@ -38,12 +48,6 @@
     <button>Commencer</button>
   </div>
 
-  <div class="task">
-    <p>S’inscrire et vérifier email</p>
-    <span>+0.50$</span>
-    <button>Commencer</button>
-  </div>
-
 </section>
 
 <nav class="menu">
@@ -54,8 +58,8 @@
   <button>👤 Profil</button>
 </nav>
 
+</div>
 
 <script src="app.js"></script>
-
 </body>
-                       </html>
+  </html>
