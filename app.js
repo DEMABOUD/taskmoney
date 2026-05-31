@@ -19,9 +19,16 @@ const appScreen = document.getElementById("app");
 const btn = document.getElementById("googleLogin");
 
 btn.addEventListener("click", async () => {
-  const result = await signInWithPopup(auth, provider);
-  if (result.user) {
-    loginScreen.style.display = "none";
-    appScreen.style.display = "block";
+  try {
+    const result = await signInWithPopup(auth, provider);
+
+    if (result.user) {
+      loginScreen.style.display = "none";
+      appScreen.style.display = "block";
+    }
+
+  } catch (error) {
+    console.log("Erreur login:", error);
+    alert("Erreur connexion Google");
   }
 });
